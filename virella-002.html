@@ -11,8 +11,10 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     .prod-hero {
-      padding: 9rem 0 5rem; position: relative; overflow: hidden;
+      padding: 9rem 0 6rem; position: relative; overflow: hidden;
       border-bottom: 1px solid var(--border-faint);
+      background-image: url('assets/images/virella-002-hero.jpg');
+      background-size: cover; background-position: center 35%;
     }
     .prod-hero-orb { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; }
     .prod-hero-orb-1 { width: 650px; height: 650px; background: var(--teal); opacity: 0.07; top: -200px; right: -100px; }
@@ -35,21 +37,15 @@
     .sibling-link:hover { color: var(--green); }
     .sibling-link .sl-name { font-family: var(--fd); font-size: 0.95rem; font-weight: 700; color: var(--soft); }
     .sibling-link:hover .sl-name { color: var(--green); }
-    /* ── Hero split layout ── */
-    .prod-hero-layout {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 3.5rem; align-items: center;
-    }
-    .prod-hero-img-wrap {
-      position: relative; border-radius: 14px; overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 32px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04);
-      background: #fff; z-index: 2;
-    }
-    .prod-hero-img-wrap img { width: 100%; height: auto; display: block; }
-    @media (max-width: 960px) {
-      .prod-hero-layout { grid-template-columns: 1fr; }
-      .prod-hero-img-wrap { max-width: 480px; margin: 2.5rem auto 0; }
+    /* ── Hero full-bleed overlay ── */
+    .prod-hero-overlay {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background: linear-gradient(
+        105deg,
+        rgba(7,19,31,0.92) 0%,
+        rgba(7,19,31,0.85) 45%,
+        rgba(7,19,31,0.68) 100%
+      );
     }
     @media (max-width: 768px) {
       .nav-links.mobile-open {
@@ -102,37 +98,31 @@
   <div class="prod-hero-orb prod-hero-orb-1"></div>
   <div class="prod-hero-orb prod-hero-orb-2"></div>
   <div class="prod-hero-dots"></div>
+  <div class="prod-hero-overlay"></div>
   <div class="product-watermark">002</div>
   <div class="container" style="position:relative;z-index:1">
-    <div class="prod-hero-layout">
-      <div class="prod-hero-text">
-        <div class="product-kicker">PE-002 · High-Performance Polyimide for 3D Printing</div>
-        <div class="product-title-wrap">
-          <span class="product-eyename">Virella</span>
-          <span class="product-name"><span class="num">-002</span></span>
-        </div>
-        <div class="product-market">
-          <div>
-            <div class="product-market-val" style="font-size:1rem">Aerospace &amp; Defense</div>
-            <div class="product-market-lbl">Primary Market</div>
-          </div>
-          <div class="product-market-sep"></div>
-          <div>
-            <div class="product-market-val" style="font-size:1rem">Industrial 3D Printing</div>
-            <div class="product-market-lbl">Technology Area</div>
-          </div>
-          <div class="product-market-sep"></div>
-          <div>
-            <div class="product-market-val" style="color:var(--teal);font-size:1.1rem">Customer Testing</div>
-            <div class="product-market-lbl">Status</div>
-          </div>
-        </div>
-        <p class="t-lead product-intro" style="margin-top:1.25rem">A partially bio-based thermoplastic polyimide for industrial 3D printing. Virella-002 delivers equal strength in every direction, withstands temperatures beyond 225°C, and enables production-grade parts in aerospace, defense, and industrial applications.</p>
+    <div class="product-kicker">PE-002 · High-Performance Polyimide for 3D Printing</div>
+    <div class="product-title-wrap">
+      <span class="product-eyename">Virella</span>
+      <span class="product-name"><span class="num">-002</span></span>
+    </div>
+    <div class="product-market">
+      <div>
+        <div class="product-market-val" style="font-size:1rem">Aerospace &amp; Defense</div>
+        <div class="product-market-lbl">Primary Market</div>
       </div>
-      <div class="prod-hero-img-wrap">
-        <img src="assets/images/virella-002-hero.jpg" alt="FFF 3D printer extruding a high-performance structural part — Virella-002">
+      <div class="product-market-sep"></div>
+      <div>
+        <div class="product-market-val" style="font-size:1rem">Industrial 3D Printing</div>
+        <div class="product-market-lbl">Technology Area</div>
+      </div>
+      <div class="product-market-sep"></div>
+      <div>
+        <div class="product-market-val" style="color:var(--teal);font-size:1.1rem">Customer Testing</div>
+        <div class="product-market-lbl">Status</div>
       </div>
     </div>
+    <p class="t-lead product-intro" style="max-width:640px;margin-top:1.25rem">A partially bio-based thermoplastic polyimide for industrial 3D printing. Virella-002 delivers equal strength in every direction, withstands temperatures beyond 225°C, and enables production-grade parts in aerospace, defense, and industrial applications.</p>
   </div>
 </section>
 

@@ -427,7 +427,7 @@ body::before {
 .tag { background: rgba(80,174,122,0.07); border: 1px solid rgba(80,174,122,0.15); border-radius: 5px; padding: 0.26rem 0.65rem; font-size: 0.76rem; color: var(--muted-hi); }
 
 /* Chart */
-.chart-box { background: var(--navy-lift); border: 1px solid var(--border-faint); border-radius: 12px; padding: 1.75rem; position: sticky; top: 6rem; }
+.chart-box { background: var(--navy-lift); border: 1px solid var(--border-faint); border-radius: 12px; padding: 1.75rem; }
 .chart-label { font-family: var(--fd); font-size: 0.68rem; font-weight: 700; color: var(--muted); text-align: center; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; justify-content: center; }
 .chart-label::before, .chart-label::after { content: ''; flex: 1; height: 1px; background: var(--border-faint); }
 .chart-canvas { position: relative; height: 295px; }
