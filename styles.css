@@ -511,6 +511,14 @@ body::before {
 footer { background: var(--navy-mid); border-top: 1px solid var(--border-faint); padding: 3.5rem 0 2rem; position: relative; z-index: 1; }
 .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 3rem; margin-bottom: 3rem; flex-wrap: wrap; }
 .footer-brand p { color: var(--muted); font-size: 0.84rem; max-width: 270px; margin-top: 0.85rem; line-height: 1.7; }
+.footer-social { margin-top: 1.1rem; }
+.footer-social-link {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.78rem; color: var(--muted); text-decoration: none;
+  padding: 0.4rem 0.85rem; border: 1px solid var(--border-faint);
+  border-radius: 6px; transition: color 0.2s, border-color 0.2s;
+}
+.footer-social-link:hover { color: var(--green); border-color: var(--green); opacity: 1; }
 .footer-logo { display: inline-flex; align-items: center; gap: 0.65rem; font-family: var(--fd); font-weight: 700; color: var(--white); font-size: 1rem; }
 .footer-logo img { height: 28px; }
 .footer-col h5 { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
