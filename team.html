@@ -82,7 +82,7 @@
         <span class="t-label">Meet the Team</span>
         <h2 class="t-h2" style="margin-top:0.6rem;color:var(--white)">The people<br>behind Pegasus.</h2>
       </div>
-      <p class="t-body" style="max-width:400px">Click on a founder card to read their full bio.</p>
+      <p class="t-body" style="max-width:400px">Click on a team-member card to read their full bio.</p>
     </div>
     <div class="team-grid">
 
@@ -314,6 +314,7 @@
     richard: {
       name: 'Richard Pieters',
       role: 'Co-Founder, CEO',
+      photo: 'assets/images/richard-pieters.jpg',
       contact: `<a href="mailto:richard@pegasus-materials.com">richard@pegasus-materials.com</a>`,
       bio: `<p>Richard is a materials industry veteran with over 25 years of experience developing and commercializing specialty polymers for global markets. Before founding Pegasus Materials, he held senior positions at GE, DSM, and Apple, where he led materials strategy for advanced electronics and consumer products programs — including qualifying new materials for consumer hardware at scale.</p>
             <p>Richard co-founded Pegasus Materials in 2023 with the conviction that synthetic biology and AI together could unlock an entirely new class of specialty materials. He leads business development, investor relations, and customer partnerships.</p>`
@@ -321,6 +322,7 @@
     chris: {
       name: 'Chris Schröder',
       role: 'Co-Founder, CPO',
+      photo: 'assets/images/chris-schroder.jpg',
       contact: `<a href="mailto:chris@pegasus-materials.com">chris@pegasus-materials.com</a>`,
       bio: `<p>Chris brings over 25 years of experience at the intersection of synthetic biology, polymer chemistry, and advanced materials. Before co-founding Pegasus Materials, he held senior technical leadership roles at Zymergen and DSM, leading bio-based materials discovery programs that combined machine learning with high-throughput biological synthesis.</p>
             <p>Chris is the primary technical architect of Pegasus Materials' product pipeline. He oversees polymer design, bio-based building block selection, and CMO-based scale-up — translating customer needs into materials that meet the most exacting industrial specifications.</p>`
@@ -333,6 +335,12 @@
     document.getElementById('modal-role').textContent    = p.role;
     document.getElementById('modal-contact').innerHTML   = p.contact;
     document.getElementById('modal-bio').innerHTML       = p.bio;
+    const ph = document.getElementById('modal-photo-ph');
+    if (p.photo) {
+      ph.innerHTML = `<img class="modal-img" src="${p.photo}" alt="${p.name}">`;
+    } else {
+      ph.innerHTML = `<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(221,234,240,0.2)" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>`;
+    }
     const modal = document.getElementById('modal');
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
