@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team — Pegasus Materials</title>
+  <meta name="description" content="Meet the founders and team behind Pegasus Materials — veterans of GE, DSM, Zymergen, and Apple, with over 50 combined years in materials science and industrial biotechnology.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .tc-photo { width: 100%; aspect-ratio: 1; overflow: hidden; background: var(--navy-mid); }
+    .tc-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: grayscale(15%); transition: filter 0.3s; }
+    .team-card:hover .tc-photo img { filter: grayscale(0%); }
+    .advisor-logo { display: inline-flex; align-items: center; background: #fff; border-radius: 6px; padding: 0.4rem 0.75rem; margin-bottom: 1.25rem; }
+    .advisor-logo img { height: 20px; width: auto; max-width: 110px; display: block; object-fit: contain; }
+    @media (max-width: 768px) {
+      .nav-links.mobile-open {
+        display: flex !important; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(7,19,31,0.98); backdrop-filter: blur(20px);
+        border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+        padding: 1rem 2.5rem 1.5rem; gap: 0.1rem; z-index: 999;
+      }
+      .nav-links.mobile-open > li > a { padding: 0.5rem 0; }
+      .nav-links.mobile-open .drop-menu {
+        position: static; opacity: 1 !important; visibility: visible !important;
+        transform: none !important; background: transparent; border: none;
+        padding: 0.25rem 0 0.5rem 1rem; box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav id="nav" class="solid">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/pegasus-logo.png" alt="Pegasus Materials">
+      Pegasus Materials
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html" class="active">Team</a></li>
+      <li class="nav-drop">
+        <a href="#">Products</a>
+        <div class="drop-menu">
+          <a href="virella-001.html"><span class="drop-tag">PE-001</span><br>Virella-001 — Connector</a>
+          <a href="virella-002.html"><span class="drop-tag">PE-002</span><br>Virella-002 — 3D Print</a>
+        </div>
+      </li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="index.html#contact" class="nav-cta btn">Contact Us</a></li>
+    </ul>
+    <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="page-hero-orb page-hero-orb-1"></div>
+  <div class="page-hero-orb page-hero-orb-2"></div>
+  <div class="page-hero-dots"></div>
+  <div class="container">
+    <div class="page-hero-eyebrow"><span class="t-label">The Team</span></div>
+    <h1 class="t-display">50 years of <span class="grad">domain expertise.</span></h1>
+    <p class="t-lead" style="margin-top:1.25rem;max-width:540px">Our founders have built and scaled materials businesses at some of the world's most demanding companies — from global chemical giants to frontier biotech firms.</p>
+  </div>
+</section>
+
+<!-- ── Team Section ── -->
+<section class="section" id="team">
+  <div class="sec-num">01</div>
+  <div class="container">
+    <div class="team-header rev">
+      <div>
+        <span class="t-label">Founders &amp; Leadership</span>
+        <h2 class="t-h2" style="margin-top:0.6rem;color:var(--white)">The people<br>behind Pegasus.</h2>
+      </div>
+      <p class="t-body" style="max-width:400px">Click on a founder card to read their full bio.</p>
+    </div>
+    <div class="team-grid">
+
+      <!-- Richard Pieters -->
+      <div class="team-card rev d1" onclick="openModal('richard')">
+        <div class="tc-photo">
+          <img src="assets/images/richard-pieters.jpg" alt="Richard Pieters">
+        </div>
+        <div class="tc-info">
+          <div class="tc-index">01 — Co-Founder</div>
+          <div class="tc-name">Richard Pieters</div>
+          <div class="tc-role">Chief Executive Officer</div>
+          <div class="tc-cta">View Bio →</div>
+        </div>
+      </div>
+
+      <!-- Chris Schröder -->
+      <div class="team-card rev d2" onclick="openModal('chris')">
+        <div class="tc-photo">
+          <img src="assets/images/chris-schroder.jpg" alt="Chris Schröder">
+        </div>
+        <div class="tc-info">
+          <div class="tc-index">02 — Co-Founder</div>
+          <div class="tc-name">Chris Schröder</div>
+          <div class="tc-role">Chief Product Officer</div>
+          <div class="tc-cta">View Bio →</div>
+        </div>
+      </div>
+
+      <!-- Lennon Zhu -->
+      <div class="team-card rev d3">
+        <div class="tc-photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(221,234,240,0.15)" stroke-width="0.75" style="width:100%;height:100%;background:var(--navy-mid);padding:3rem">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </div>
+        <div class="tc-info">
+          <div class="tc-index">03</div>
+          <div class="tc-name">Lennon Zhu</div>
+          <div class="tc-role">Technical Sales, Greater China</div>
+        </div>
+      </div>
+
+      <!-- David Cusumano -->
+      <div class="team-card rev d4">
+        <div class="tc-photo">
+          <img src="assets/images/david-cusumano.jpg" alt="David Cusumano">
+        </div>
+        <div class="tc-info">
+          <div class="tc-index">04</div>
+          <div class="tc-name">David Cusumano</div>
+          <div class="tc-role">Operations Lead</div>
+        </div>
+      </div>
+
+      <!-- Fabian Wouters -->
+      <div class="team-card rev d5">
+        <div class="tc-photo">
+          <img src="assets/images/fabian-wouters.jpg" alt="Fabian Wouters">
+        </div>
+        <div class="tc-info">
+          <div class="tc-index">05</div>
+          <div class="tc-name">Fabian Wouters</div>
+          <div class="tc-role">Research Chemist</div>
+        </div>
+      </div>
+
+      <!-- Joeri Janssen -->
+      <div class="team-card rev d5">
+        <div class="tc-photo">
+          <img src="assets/images/joeri-janssen.jpg" alt="Joeri Janssen">
+        </div>
+        <div class="tc-info">
+          <div class="tc-index">06</div>
+          <div class="tc-name">Joeri Janssen</div>
+          <div class="tc-role">Analytical Scientist</div>
+        </div>
+      </div>
+
+      <!-- Menne Verkooijen -->
+      <div class="team-card rev d5">
+        <div class="tc-photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(221,234,240,0.15)" stroke-width="0.75" style="width:100%;height:100%;background:var(--navy-mid);padding:3rem">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </div>
+        <div class="tc-info">
+          <div class="tc-index">07</div>
+          <div class="tc-name">Menne Verkooijen</div>
+          <div class="tc-role">Research Chemist</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="rev" style="margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--border-faint);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem">
+      <div>
+        <div class="t-label" style="margin-bottom:0.5rem">Join the Team</div>
+        <p class="t-body" style="max-width:420px">We're growing fast and always looking for exceptional talent in materials science, synthetic biology, chemistry, and business development.</p>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary">Get In Touch →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Advisors ── -->
+<section class="section section-mid">
+  <div class="sec-num">02</div>
+  <div class="container">
+    <div class="rev" style="margin-bottom:3rem">
+      <span class="t-label">Network &amp; Advisors</span>
+      <h2 class="t-h2" style="margin-top:0.6rem;color:var(--white)">Backed by the<br>best in the business.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem" class="rev d1">
+      <div style="background:var(--navy-card);border:1px solid var(--border-faint);border-radius:12px;padding:2rem">
+        <div class="advisor-logo">
+          <img src="assets/images/ferment-logo.png" alt="Ferment">
+        </div>
+        <div class="t-label" style="margin-bottom:1rem">Venture Partners</div>
+        <p class="t-body">Ferment — an industrial biotech venture studio with deep expertise in translating advanced biology into real-world products.</p>
+      </div>
+      <div style="background:var(--navy-card);border:1px solid var(--border-faint);border-radius:12px;padding:2rem">
+        <div class="advisor-logo">
+          <img src="https://businessinlimburg.com/application/themes/z_theme/assets/images/liof-logo.svg" alt="LIOF">
+        </div>
+        <div class="t-label" style="margin-bottom:1rem">Regional Development</div>
+        <p class="t-body">LIOF — the Limburg regional development agency, providing capital, network, and cross-border trade expertise to support our growth.</p>
+      </div>
+      <div style="background:var(--navy-card);border:1px solid var(--border-faint);border-radius:12px;padding:2rem">
+        <div class="advisor-logo">
+          <img src="https://www.fibrant52.com/Frontend/Images/FibrantLogo.png" alt="Fibrant">
+        </div>
+        <div class="t-label" style="margin-bottom:1rem">Materials Partner</div>
+        <p class="t-body">Fibrant — a leading Dutch chemical company providing materials knowledge and manufacturing infrastructure to support our scale-up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/images/pegasus-logo.png" alt="Pegasus Materials">
+          Pegasus Materials
+        </a>
+        <p>Bio-based specialty materials for the world's most demanding applications.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="virella-001.html">Virella-001</a></li>
+          <li><a href="virella-002.html">Virella-002</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@pegasus-materials.com">info@pegasus-materials.com</a></li>
+          <li><a href="mailto:richard@pegasus-materials.com">richard@pegasus-materials.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Pegasus Materials BV. All rights reserved.</span>
+      <span class="footer-geo">Brightlands Chemelot Campus · Geleen, Netherlands</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Bio Modals ── -->
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <div class="modal-head">
+      <div class="modal-img-ph" id="modal-photo-ph">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(221,234,240,0.2)" stroke-width="1">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+      </div>
+      <div>
+        <div class="m-name" id="modal-name"></div>
+        <div class="m-role" id="modal-role"></div>
+        <div class="m-contact" id="modal-contact"></div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-bio" id="modal-bio"></div>
+    </div>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+<script>
+  const bios = {
+    richard: {
+      name: 'Richard Pieters',
+      role: 'Co-Founder & Chief Executive Officer',
+      contact: `<a href="mailto:richard@pegasus-materials.com">richard@pegasus-materials.com</a>`,
+      bio: `<p>Richard is a materials industry veteran with over 25 years of experience developing and commercializing specialty polymers for global markets. Before founding Pegasus Materials, he held senior positions at GE, DSM, and Apple, where he led materials strategy for advanced electronics and consumer products programs — including qualifying new materials for consumer hardware at scale.</p>
+            <p>Richard co-founded Pegasus Materials in 2023 with the conviction that synthetic biology and AI together could unlock an entirely new class of specialty materials. He leads business development, investor relations, and customer partnerships.</p>`
+    },
+    chris: {
+      name: 'Chris Schröder',
+      role: 'Co-Founder & Chief Product Officer',
+      contact: `<a href="mailto:chris@pegasus-materials.com">chris@pegasus-materials.com</a>`,
+      bio: `<p>Chris brings over 25 years of experience at the intersection of synthetic biology, polymer chemistry, and advanced materials. Before co-founding Pegasus Materials, he held senior technical leadership roles at Zymergen and DSM, leading bio-based materials discovery programs that combined machine learning with high-throughput biological synthesis.</p>
+            <p>Chris is the primary technical architect of Pegasus Materials' product pipeline. He oversees polymer design, bio-based building block selection, and CMO-based scale-up — translating customer needs into materials that meet the most exacting industrial specifications.</p>`
+    }
+  };
+
+  function openModal(id) {
+    const p = bios[id];
+    document.getElementById('modal-name').textContent    = p.name;
+    document.getElementById('modal-role').textContent    = p.role;
+    document.getElementById('modal-contact').innerHTML   = p.contact;
+    document.getElementById('modal-bio').innerHTML       = p.bio;
+    const modal = document.getElementById('modal');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('modal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+</body>
+</html>

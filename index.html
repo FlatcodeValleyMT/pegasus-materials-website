@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pegasus Materials — Bio-based High-Performance Materials</title>
+  <meta name="description" content="Pegasus Materials develops bio-based specialty materials for electronics, aerospace, and 3D printing — merging synthetic biology with advanced materials science.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      position: relative; overflow: hidden; padding: 6rem 0 3.5rem;
+    }
+    .hero-orb { position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.1; pointer-events: none; }
+    .hero-orb-1 { width: 750px; height: 750px; background: var(--green); top: -240px; right: -120px; }
+    .hero-orb-2 { width: 420px; height: 420px; background: var(--teal); bottom: -100px; left: -80px; }
+    .hero-dots {
+      position: absolute; right: 0; top: 0; width: 50%; height: 100%; opacity: 0.04;
+      background-image: radial-gradient(circle, var(--green) 1.5px, transparent 1.5px);
+      background-size: 30px 30px; pointer-events: none; z-index: 2;
+    }
+    .hero-content { position: relative; z-index: 3; }
+    .hero-video {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      z-index: 0; pointer-events: none;
+    }
+    .hero-video-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(7,19,31,0.82) 0%, rgba(7,19,31,0.60) 50%, rgba(7,19,31,0.78) 100%);
+      z-index: 1; pointer-events: none;
+    }
+    .hero-eyebrow { display: flex; align-items: center; gap: 1rem; margin-bottom: 2.25rem; }
+    .hero-divider { width: 36px; height: 1px; background: var(--border); }
+    .hero-title { display: flex; flex-direction: column; gap: 0; margin-bottom: 1.75rem; }
+    .hero-title-line1 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted-hi); margin-bottom: 0.4rem; }
+    .hero-lead { max-width: 580px; margin-bottom: 2.5rem; }
+    .hero-stats {
+      display: flex; align-items: center; gap: 0;
+      margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border-faint); flex-wrap: wrap;
+    }
+    .hstat { padding: 0 2.5rem; }
+    .hstat:first-child { padding-left: 0; }
+    .hstat-val {
+      font-family: var(--fd); font-size: clamp(2rem, 3.5vw, 2.6rem); font-weight: 800; line-height: 1;
+      background: linear-gradient(135deg, var(--green), var(--teal));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hstat-lbl { font-size: 0.7rem; color: var(--muted); margin-top: 0.35rem; line-height: 1.45; max-width: 110px; }
+    .hstat-div { width: 1px; height: 44px; background: var(--border-faint); flex-shrink: 0; }
+    /* ── About Teaser ── */
+    .at-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .at-lead-title { margin-top: 0.75rem; margin-bottom: 1.25rem; }
+    .at-pillars { display: flex; flex-direction: column; gap: 1.1rem; }
+    .at-pillar {
+      padding: 1.4rem 1.6rem; background: var(--navy-mid);
+      border: 1px solid var(--border-faint); border-radius: 10px; transition: background 0.25s, border-color 0.25s;
+    }
+    .at-pillar:hover { background: var(--navy-card); border-color: var(--border); }
+    .at-pillar-num { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.15em; color: var(--green); margin-bottom: 0.45rem; opacity: 0.7; }
+    .at-pillar h4 { font-family: var(--fd); font-size: 0.92rem; font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
+    .at-pillar p { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
+    /* ── Mobile nav open ── */
+    @media (max-width: 768px) {
+      .nav-links.mobile-open {
+        display: flex !important; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(7,19,31,0.98); backdrop-filter: blur(20px);
+        border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+        padding: 1rem 2.5rem 1.5rem; gap: 0.1rem; z-index: 999;
+      }
+      .nav-links.mobile-open > li > a { padding: 0.5rem 0; }
+      .nav-links.mobile-open .drop-menu {
+        position: static; opacity: 1 !important; visibility: visible !important;
+        transform: none !important; background: transparent; border: none;
+        padding: 0.25rem 0 0.5rem 1rem; box-shadow: none;
+      }
+      .hstat { padding: 0.75rem 1.25rem; }
+      .hstat:first-child { padding-left: 1.25rem; }
+      .hstat-div { display: none; }
+      .at-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/pegasus-logo.png" alt="Pegasus Materials">
+      Pegasus Materials
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li class="nav-drop">
+        <a href="#">Products</a>
+        <div class="drop-menu">
+          <a href="virella-001.html"><span class="drop-tag">PE-001</span><br>Virella-001 — Connector</a>
+          <a href="virella-002.html"><span class="drop-tag">PE-002</span><br>Virella-002 — 3D Print</a>
+        </div>
+      </li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="#contact" class="nav-cta btn">Contact Us</a></li>
+    </ul>
+    <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero" id="home">
+  <!-- Hero video background -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/video/hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-video-overlay"></div>
+  <!-- Keep orbs as fallback if video doesn't load -->
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-dots"></div>
+  <div class="container hero-content">
+    <div class="hero-title">
+      <span class="hero-title-line1">The Future of</span>
+      <span class="t-display white">High-Performance</span>
+      <span class="t-display grad">Materials.</span>
+    </div>
+    <p class="t-lead hero-lead">Bio-based specialty materials engineered for electronics, aerospace, and 3D printing — merging synthetic biology with advanced materials science.</p>
+    <div class="actions rev d1">
+      <a href="virella-001.html" class="btn btn-primary">Explore Products →</a>
+      <a href="about.html" class="btn btn-outline">Our Science</a>
+    </div>
+    <div class="hero-stats rev d2">
+      <div class="hstat">
+        <div class="hstat-val" data-count="50" data-suffix="+">50+</div>
+        <div class="hstat-lbl">Years Combined Founder Experience</div>
+      </div>
+      <div class="hstat-div"></div>
+      <div class="hstat">
+        <div class="hstat-val">2023</div>
+        <div class="hstat-lbl">Founded at Brightlands Chemelot Campus</div>
+      </div>
+      <div class="hstat-div"></div>
+      <div class="hstat">
+        <div class="hstat-val" data-count="2">2</div>
+        <div class="hstat-lbl">Novel Materials Launched</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── About Teaser ── -->
+<section class="section section-mid" id="about-teaser">
+  <div class="sec-num">01</div>
+  <div class="side-label">About</div>
+  <div class="container">
+    <div class="at-grid">
+      <div class="rev">
+        <span class="t-label">About Pegasus</span>
+        <h2 class="t-h2 at-lead-title">A new kind of <br><span class="grad">materials company.</span></h2>
+        <p class="t-lead" style="font-size:1.05rem;margin-bottom:1.75rem">We combine synthetic biology, AI-accelerated chemistry, and deep materials science to engineer polymers that outperform conventional petrochemical solutions — with a smaller environmental footprint.</p>
+        <p class="t-body" style="margin-bottom:2rem">Founded in 2023 and headquartered at the Brightlands Chemelot Campus in Geleen, Netherlands, Pegasus Materials serves the most demanding customers in the world, and is backed by leading investors and strategics including Fibrant, Ferment, and LIOF.</p>
+        <a href="about.html" class="btn btn-ghost">Our Approach →</a>
+      </div>
+      <div class="at-pillars">
+        <div class="at-pillar rev d1">
+          <div class="at-pillar-num">01</div>
+          <h4>Bio-Based Building Blocks</h4>
+          <p>We source monomers from biological pathways, unlocking unique chemical configurations that conventional petrochemistry simply cannot access.</p>
+        </div>
+        <div class="at-pillar rev d2">
+          <div class="at-pillar-num">02</div>
+          <h4>Deep Understanding of Customer Needs</h4>
+          <p>Every new material starts with designing a target product spec based on what our customers need to power their own product innovation.</p>
+        </div>
+        <div class="at-pillar rev d3">
+          <div class="at-pillar-num">03</div>
+          <h4>AI-Accelerated Discovery</h4>
+          <p>Blending traditional computational chemistry with focused machine learning tools lets us prototype candidate materials quickly — compressing years of research into months.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Products Teaser ── -->
+<section class="section" id="products">
+  <div class="sec-num">02</div>
+  <div class="side-label">Products</div>
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:3rem;flex-wrap:wrap">
+      <div class="rev">
+        <span class="t-label">Our Portfolio</span>
+        <h2 class="t-h2" style="margin-top:0.6rem;color:var(--white)">First-to-market.<br>Best-in-class.</h2>
+      </div>
+      <p class="t-body rev d1" style="max-width:360px;text-align:right">Two materials in active customer qualification — targeting the most demanding sectors in electronics and advanced manufacturing.</p>
+    </div>
+    <div class="product-teaser-grid">
+      <a href="virella-001.html" class="product-teaser-card rev d1">
+        <div class="ptc-badge">PE-001 · Specialty Polyamide for Connectors</div>
+        <div class="ptc-name">Virella<span class="num">-001</span></div>
+        <p class="ptc-desc">A 100% bio-based high-heat polyamide with ultra-low moisture uptake and exceptional flow — engineered for next-generation USB-C and DDR memory connectors.</p>
+        <div class="ptc-market">
+          <div>
+            <div class="ptc-market-val" style="font-size:0.9rem">Electronics &amp; Auto</div>
+            <div class="ptc-market-lbl">Primary Market</div>
+          </div>
+          <div style="width:1px;height:2rem;background:var(--border-faint)"></div>
+          <div>
+            <div class="ptc-market-val" style="font-size:1rem;color:var(--green)">Commercial</div>
+            <div class="ptc-market-lbl">Current Status</div>
+          </div>
+          <div class="ptc-arrow">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+        </div>
+      </a>
+      <a href="virella-002.html" class="product-teaser-card rev d2">
+        <div class="ptc-badge">PE-002 · High-Performance Polyimide for 3D Printing</div>
+        <div class="ptc-name">Virella<span class="num">-002</span></div>
+        <p class="ptc-desc">A partially bio-based thermoplastic polyimide delivering true isotropic strength in all print orientations — enabling production-grade 3D-printed parts for aerospace and defense.</p>
+        <div class="ptc-market">
+          <div>
+            <div class="ptc-market-val" style="font-size:0.9rem">Aerospace &amp; Defense</div>
+            <div class="ptc-market-lbl">Primary Market</div>
+          </div>
+          <div style="width:1px;height:2rem;background:var(--border-faint)"></div>
+          <div>
+            <div class="ptc-market-val" style="font-size:1rem;color:var(--teal)">Customer Testing</div>
+            <div class="ptc-market-lbl">Current Status</div>
+          </div>
+          <div class="ptc-arrow">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Break Panel ── -->
+<div class="break-panel">
+  <div class="container">
+    <div class="break-inner">
+      <span class="break-kicker">Our Mission</span>
+      <p class="break-quote">
+        "Materials innovation has stalled." <em>We're here to fix that</em> — with biology.
+      </p>
+      <div class="break-meta">
+        <div>
+          <div class="break-stat-val">50+</div>
+          <div class="break-stat-lbl">Years of Domain Experience</div>
+        </div>
+        <div>
+          <div class="break-stat-val">2023</div>
+          <div class="break-stat-lbl">Founded</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Partners ── -->
+<section class="partners-section">
+  <div class="container">
+    <div class="partners-inner">
+      <span class="partners-label">Backed By</span>
+      <div class="partners-row">
+        <a href="https://ferment.co" target="_blank" rel="noopener" class="partner-logo-wrap">
+          <img src="assets/images/ferment-logo.png" alt="Ferment">
+        </a>
+        <a href="https://businessinlimburg.com" target="_blank" rel="noopener" class="partner-logo-wrap">
+          <img src="https://businessinlimburg.com/application/themes/z_theme/assets/images/liof-logo.svg" alt="LIOF">
+        </a>
+        <a href="https://www.fibrant52.com" target="_blank" rel="noopener" class="partner-logo-wrap">
+          <img src="https://www.fibrant52.com/Frontend/Images/FibrantLogo.png" alt="Fibrant">
+        </a>
+        <a href="https://www.brightlands.com" target="_blank" rel="noopener" class="partner-logo-wrap">
+          <img src="https://www.brightlands.com/sites/default/themes/custom/brightlands/assets/images/brightlands-screen-180x48-black.svg" alt="Brightlands Chemelot">
+        </a>
+        <a href="https://just-transition.ec.europa.eu" target="_blank" rel="noopener" class="partner-logo-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" alt="EU Just Transition Fund" style="height:34px;width:auto">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Media Teaser ── -->
+<section class="section section-mid" id="media-teaser">
+  <div class="sec-num">03</div>
+  <div class="side-label">Press</div>
+  <div class="container">
+    <div class="media-header rev">
+      <div>
+        <span class="t-label">Media &amp; Press</span>
+        <h2 class="t-h2" style="margin-top:0.6rem;color:var(--white)">In the news.</h2>
+      </div>
+      <p class="t-body">Coverage from the materials science and industrial biotech community on our technology and recent funding milestones.</p>
+    </div>
+    <div class="media-grid">
+      <a href="https://www.businesswire.com/news/home/20251120957112/en/Pegasus-Materials-Debuts-Bio-based-Specialty-Materials-for-Electronics-Aerospace-and-3D-Printing"
+         target="_blank" rel="noopener" class="media-card rev d1">
+        <div class="media-top">
+          <span class="media-src">Business Wire</span>
+          <span class="media-date">Nov 2025</span>
+        </div>
+        <div class="media-line"></div>
+        <p class="media-hl">Pegasus Materials Debuts Bio-based Specialty Materials for Electronics, Aerospace, and 3D Printing</p>
+        <span class="media-read">Read Article
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+      <a href="https://www.fibrant52.com/en/about/news/2024/Pegasus-Materials-Secures-Investment-to-Transform-Polymers"
+         target="_blank" rel="noopener" class="media-card rev d2">
+        <div class="media-top">
+          <span class="media-src">Fibrant</span>
+          <span class="media-date">2024</span>
+        </div>
+        <div class="media-line"></div>
+        <p class="media-hl">Pegasus Materials Secures Investment to Transform Polymers</p>
+        <span class="media-read">Read Article
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+      <a href="https://worldbiomarketinsights.com/pegasus-materials-unveils-bio-based-high-performance-materials/"
+         target="_blank" rel="noopener" class="media-card rev d3">
+        <div class="media-top">
+          <span class="media-src">World Biomarket Insights</span>
+          <span class="media-date">2025</span>
+        </div>
+        <div class="media-line"></div>
+        <p class="media-hl">Pegasus Materials Unveils Bio-based High-Performance Materials</p>
+        <span class="media-read">Read Article
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+    </div>
+    <div class="media-see-all rev">
+      <a href="media.html" class="btn btn-outline">See All Coverage →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ── -->
+<section class="section" id="contact">
+  <div class="sec-num">04</div>
+  <div class="container">
+    <div class="rev">
+      <span class="t-label">Get In Touch</span>
+      <h2 class="contact-giant" style="margin-top:0.5rem">Let's <em>talk</em><br>materials.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="rev d1">
+        <p class="t-lead" style="font-size:1rem;margin-bottom:2rem">Whether you're a potential customer, partner, or investor — we'd love to discuss how Pegasus Materials can help you push the boundaries of what's possible.</p>
+        <div class="cinfo-list">
+          <div class="cinfo">
+            <div class="cinfo-icon">📍</div>
+            <div>
+              <div class="cinfo-lbl">Location</div>
+              <div class="cinfo-val">Brightlands Chemelot Campus<br>Geleen, Netherlands</div>
+            </div>
+          </div>
+          <div class="cinfo">
+            <div class="cinfo-icon">✉️</div>
+            <div>
+              <div class="cinfo-lbl">General Inquiries</div>
+              <div class="cinfo-val"><a href="mailto:info@pegasus-materials.com">info@pegasus-materials.com</a></div>
+            </div>
+          </div>
+          <div class="cinfo">
+            <div class="cinfo-icon">👤</div>
+            <div>
+              <div class="cinfo-lbl">Richard Pieters — CEO</div>
+              <div class="cinfo-val"><a href="mailto:richard@pegasus-materials.com">richard@pegasus-materials.com</a></div>
+            </div>
+          </div>
+          <div class="cinfo">
+            <div class="cinfo-icon">👤</div>
+            <div>
+              <div class="cinfo-lbl">Chris Schröder — CPO</div>
+              <div class="cinfo-val"><a href="mailto:chris@pegasus-materials.com">chris@pegasus-materials.com</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-wrap rev d2">
+        <div id="contact-form-wrap">
+          <h3>Send a Message</h3>
+          <p class="form-sub">We typically respond within 1–2 business days.</p>
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="fgroup"><label>First Name</label><input type="text" name="fname" placeholder="Jane" required></div>
+              <div class="fgroup"><label>Last Name</label><input type="text" name="lname" placeholder="Smith" required></div>
+            </div>
+            <div class="fgroup"><label>Email</label><input type="email" name="email" placeholder="jane@company.com" required></div>
+            <div class="fgroup"><label>Company</label><input type="text" name="company" placeholder="Your organization"></div>
+            <div class="fgroup">
+              <label>Inquiry Type</label>
+              <select name="type">
+                <option value="">Select one…</option>
+                <option>Product / Technical Inquiry</option>
+                <option>Investment / Partnership</option>
+                <option>Media / Press</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="fgroup"><label>Message</label><textarea name="message" placeholder="Tell us about your project or question…"></textarea></div>
+            <button type="submit" class="btn btn-primary form-submit">Send Message →</button>
+          </form>
+        </div>
+        <div id="form-success">
+          <div class="check">✓</div>
+          <h4>Message Received</h4>
+          <p>Thanks for reaching out. We'll be in touch shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/images/pegasus-logo.png" alt="Pegasus Materials">
+          Pegasus Materials
+        </a>
+        <p>Bio-based specialty materials for the world's most demanding applications.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="virella-001.html">Virella-001</a></li>
+          <li><a href="virella-002.html">Virella-002</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@pegasus-materials.com">info@pegasus-materials.com</a></li>
+          <li><a href="mailto:richard@pegasus-materials.com">richard@pegasus-materials.com</a></li>
+          <li><a href="mailto:chris@pegasus-materials.com">chris@pegasus-materials.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Pegasus Materials BV. All rights reserved.</span>
+      <span class="footer-geo">Brightlands Chemelot Campus · Geleen, Netherlands</span>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('contact-form-wrap').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  });
+</script>
+</body>
+</html>

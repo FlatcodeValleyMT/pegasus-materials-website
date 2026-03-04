@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virella-001 — Pegasus Materials</title>
+  <meta name="description" content="Virella-001: a 100% bio-based high-heat polyamide with ultra-low moisture uptake and exceptional flow, engineered for next-generation electronic connectors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .prod-hero {
+      padding: 9rem 0 5rem; position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--border-faint);
+    }
+    .prod-hero-orb { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; }
+    .prod-hero-orb-1 { width: 650px; height: 650px; background: var(--green); opacity: 0.07; top: -200px; right: -100px; }
+    .prod-hero-orb-2 { width: 300px; height: 300px; background: var(--teal); opacity: 0.06; bottom: -50px; left: -50px; }
+    .prod-hero-dots {
+      position: absolute; right: 0; top: 0; width: 45%; height: 100%;
+      opacity: 0.04;
+      background-image: radial-gradient(circle, var(--green) 1.5px, transparent 1.5px);
+      background-size: 28px 28px; pointer-events: none;
+    }
+    .sibling-nav {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-faint);
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .sibling-link {
+      display: flex; align-items: center; gap: 0.65rem;
+      font-size: 0.8rem; color: var(--muted); transition: color 0.2s; text-decoration: none;
+    }
+    .sibling-link:hover { color: var(--green); }
+    .sibling-link .sl-name { font-family: var(--fd); font-size: 0.95rem; font-weight: 700; color: var(--soft); }
+    .sibling-link:hover .sl-name { color: var(--green); }
+    @media (max-width: 768px) {
+      .nav-links.mobile-open {
+        display: flex !important; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(7,19,31,0.98); backdrop-filter: blur(20px);
+        border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+        padding: 1rem 2.5rem 1.5rem; gap: 0.1rem; z-index: 999;
+      }
+      .nav-links.mobile-open > li > a { padding: 0.5rem 0; }
+      .nav-links.mobile-open .drop-menu {
+        position: static; opacity: 1 !important; visibility: visible !important;
+        transform: none !important; background: transparent; border: none;
+        padding: 0.25rem 0 0.5rem 1rem; box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav id="nav" class="solid">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/pegasus-logo.png" alt="Pegasus Materials">
+      Pegasus Materials
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li class="nav-drop">
+        <a href="#" class="active">Products</a>
+        <div class="drop-menu">
+          <a href="virella-001.html" class="active"><span class="drop-tag">PE-001</span><br>Virella-001 — Connector</a>
+          <a href="virella-002.html"><span class="drop-tag">PE-002</span><br>Virella-002 — 3D Print</a>
+        </div>
+      </li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="index.html#contact" class="nav-cta btn">Contact Us</a></li>
+    </ul>
+    <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Product Hero ── -->
+<section class="prod-hero">
+  <div class="prod-hero-orb prod-hero-orb-1"></div>
+  <div class="prod-hero-orb prod-hero-orb-2"></div>
+  <div class="prod-hero-dots"></div>
+  <div class="product-watermark">001</div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="product-kicker">PE-001 · Specialty Polyamide for Connectors</div>
+    <div class="product-title-wrap">
+      <span class="product-eyename">Virella</span>
+      <span class="product-name"><span class="num">-001</span></span>
+    </div>
+    <div class="product-market">
+      <div>
+        <div class="product-market-val" style="font-size:1rem">Electronics &amp; Auto</div>
+        <div class="product-market-lbl">Primary Market</div>
+      </div>
+      <div class="product-market-sep"></div>
+      <div>
+        <div class="product-market-val" style="font-size:1rem">USB-C &amp; DDR Memory</div>
+        <div class="product-market-lbl">Target Applications</div>
+      </div>
+      <div class="product-market-sep"></div>
+      <div>
+        <div class="product-market-val" style="color:var(--green);font-size:1.1rem">Commercial</div>
+        <div class="product-market-lbl">Status</div>
+      </div>
+    </div>
+    <p class="t-lead product-intro" style="max-width:620px;margin-top:1.25rem">A 100% bio-based high-heat polyamide that combines exceptional melt flow with ultra-low moisture uptake — enabling thinner walls, faster charging, and higher manufacturing yields in next-generation USB-C and DDR memory connectors.</p>
+  </div>
+</section>
+
+<!-- ── Product Detail ── -->
+<section class="section">
+  <div class="container">
+    <div class="product-grid">
+
+      <!-- Left: Properties & Description -->
+      <div>
+        <span class="t-label rev">Material Overview</span>
+        <h2 class="t-h3" style="color:var(--white);margin-top:0.7rem;margin-bottom:1.5rem" class="rev d1">
+          The connector material industry has been waiting for.
+        </h2>
+        <p class="t-body rev d1" style="margin-bottom:1.5rem">For consumer electronics, data center servers, and electric vehicles, next-generation connectors demand materials that can accommodate thinner walls, survive reflow soldering without blistering, and enable faster electrical performance. Virella-001 was designed from the ground up to meet and exceed these requirements.</p>
+        <p class="t-body rev d2" style="margin-bottom:2rem">Produced using two bio-based monomers, Virella-001 is a polyamide with a unique molecular architecture that delivers lower water absorption than any incumbent connector polyamide — significantly reducing blistering during reflow soldering — while its high flow properties enable thinner, more precise molding of complex connector geometries.</p>
+
+        <div class="t-label rev" style="margin-bottom:1.1rem;margin-top:2rem">Key Properties</div>
+        <div class="props rev d1">
+          <div class="prop">
+            <div class="prop-num">01</div>
+            <div class="prop-text"><strong>Ultra-Low Moisture Uptake</strong> — Dramatically reduces blistering during reflow soldering, cutting scrap rates and improving manufacturing yield.</div>
+          </div>
+          <div class="prop">
+            <div class="prop-num">02</div>
+            <div class="prop-text"><strong>Exceptional Melt Flow</strong> — High fluidity enables thinner wall sections and more complex geometries without sacrificing structural integrity.</div>
+          </div>
+          <div class="prop">
+            <div class="prop-num">03</div>
+            <div class="prop-text"><strong>High Heat Resistance</strong> — Survives lead-free reflow soldering profiles and extended high-temperature operating environments.</div>
+          </div>
+          <div class="prop">
+            <div class="prop-num">04</div>
+            <div class="prop-text"><strong>Improved Electrical Insulation</strong> — Superior dielectric properties enable faster data transfer rates and support tighter connector pitch designs.</div>
+          </div>
+          <div class="prop">
+            <div class="prop-num">05</div>
+            <div class="prop-text"><strong>Color Stability</strong> — Maintains aesthetic consistency across thermal cycles — critical for consumer electronics applications.</div>
+          </div>
+          <div class="prop">
+            <div class="prop-num">06</div>
+            <div class="prop-text"><strong>100% Bio-Based</strong> — Derived entirely from renewable bio-based monomers, meeting sustainability mandates without sacrificing performance.</div>
+          </div>
+        </div>
+
+        <div class="t-label rev" style="margin-bottom:1rem;margin-top:2.5rem">Target Applications</div>
+        <div class="tags rev d1">
+          <span class="tag">USB-C Connectors</span>
+          <span class="tag">DDR Memory Modules</span>
+          <span class="tag">Datacenter Servers</span>
+          <span class="tag">Consumer Electronics</span>
+          <span class="tag">EV Charging Systems</span>
+          <span class="tag">Power Connectors</span>
+          <span class="tag">Auto Connectors</span>
+          <span class="tag">Smartphones</span>
+          <span class="tag">Laptops &amp; Tablets</span>
+        </div>
+
+      </div>
+
+      <!-- Right: Chart + Competitive Comparison -->
+      <div>
+        <div class="chart-box rev d2">
+          <div class="chart-label">Performance vs. Incumbents</div>
+          <div class="chart-canvas">
+            <canvas id="radarChart001"></canvas>
+          </div>
+          <div class="chart-note">All figures are directional and results will vary based on specific compounding, formulations, and applications.</div>
+        </div>
+
+        <div class="specs-box rev d3" style="margin-top:1.5rem">
+          <div class="specs-head">Competitive Comparison</div>
+          <table class="specs-table">
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Virella-001</th>
+                <th>PA4.6</th>
+                <th>PPA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Moisture Uptake</td>
+                <td class="hi">Lowest</td>
+                <td>High</td>
+                <td>Medium</td>
+              </tr>
+              <tr>
+                <td>Melt Flow</td>
+                <td class="hi">Highest</td>
+                <td>Medium</td>
+                <td>Medium-High</td>
+              </tr>
+              <tr>
+                <td>Heat Resistance</td>
+                <td class="hi">High</td>
+                <td>High</td>
+                <td>Very High</td>
+              </tr>
+              <tr>
+                <td>Electrical Insulation</td>
+                <td class="hi">Superior</td>
+                <td>Good</td>
+                <td>Good</td>
+              </tr>
+              <tr>
+                <td>Bio-Based Content</td>
+                <td class="hi">100%</td>
+                <td>&lt;5%</td>
+                <td>&lt;5%</td>
+              </tr>
+              <tr>
+                <td>Reflow Blistering Risk</td>
+                <td class="hi">Very Low</td>
+                <td>High</td>
+                <td>Medium</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Break Panel ── -->
+<div class="break-panel">
+  <div class="container">
+    <div class="break-inner">
+      <span class="break-kicker">In Qualification</span>
+      <p class="break-quote">
+        Virella-001 is currently being evaluated by connector manufacturers for <em>USB-C interconnects and DDR memory</em> connectors.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA ── -->
+<section class="section section-mid">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+      <div class="rev">
+        <span class="t-label">Get the Full Picture</span>
+        <h2 class="t-h2" style="margin-top:0.75rem;color:var(--white)">Request a<br><span class="grad">spec sheet.</span></h2>
+        <p class="t-body" style="margin-top:1.25rem;margin-bottom:2rem">Get access to the full technical data sheet for Virella-001, including detailed mechanical, thermal, and electrical property tables. Our materials science team is available to answer technical questions and discuss qualification programs.</p>
+        <div class="actions">
+          <a href="index.html#contact" class="btn btn-primary">Request Spec Sheet →</a>
+          <a href="index.html#contact" class="btn btn-outline">Contact Our Team</a>
+        </div>
+      </div>
+      <div class="rev d1">
+        <div style="padding:2rem;background:var(--navy-card);border:1px solid var(--border-faint);border-radius:14px">
+          <div class="t-label" style="margin-bottom:1.5rem">What You'll Receive</div>
+          <div class="props" style="margin:0">
+            <div class="prop">
+              <div class="prop-num">→</div>
+              <div class="prop-text">Full Technical Data Sheet with mechanical, thermal &amp; electrical properties</div>
+            </div>
+            <div class="prop">
+              <div class="prop-num">→</div>
+              <div class="prop-text">Direct contact with our materials science team for Q&amp;A</div>
+            </div>
+            <div class="prop">
+              <div class="prop-num">→</div>
+              <div class="prop-text">Information on our customer qualification program and sample availability</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Sibling navigation ── -->
+<section class="section" style="padding:3rem 0">
+  <div class="container">
+    <div class="sibling-nav">
+      <a href="index.html" class="sibling-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        Back to Home
+      </a>
+      <a href="virella-002.html" class="sibling-link">
+        <div>
+          <div style="font-size:0.65rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.15rem">Next Product</div>
+          <div class="sl-name">Virella-002 — 3D Print →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/images/pegasus-logo.png" alt="Pegasus Materials">
+          Pegasus Materials
+        </a>
+        <p>Bio-based specialty materials for the world's most demanding applications.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="virella-001.html">Virella-001</a></li>
+          <li><a href="virella-002.html">Virella-002</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@pegasus-materials.com">info@pegasus-materials.com</a></li>
+          <li><a href="mailto:richard@pegasus-materials.com">richard@pegasus-materials.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Pegasus Materials BV. All rights reserved.</span>
+      <span class="footer-geo">Brightlands Chemelot Campus · Geleen, Netherlands</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="scripts.js"></script>
+<script>
+  // Radar Chart — Virella-001 vs PA4.6 vs PPA
+  Chart.defaults.color = 'rgba(221,234,240,0.55)';
+  Chart.defaults.font.family = "'Inter', sans-serif";
+
+  new Chart(document.getElementById('radarChart001').getContext('2d'), {
+    type: 'radar',
+    data: {
+      labels: ['Flow Rate', 'Low Moisture', 'Heat Resistance', 'Electrical Insulation', 'Bio Content', 'Color Stability'],
+      datasets: [
+        {
+          label: 'Virella-001',
+          data: [82, 90, 70, 76, 100, 65],
+          borderColor: '#50AE7A',
+          backgroundColor: 'rgba(80,174,122,0.15)',
+          pointBackgroundColor: '#50AE7A',
+          pointBorderColor: '#fff',
+          borderWidth: 2.5
+        },
+        {
+          label: 'PA4.6',
+          data: [58, 28, 75, 60, 5, 50],
+          borderColor: 'rgba(221,234,240,0.35)',
+          backgroundColor: 'rgba(221,234,240,0.05)',
+          pointBackgroundColor: 'rgba(221,234,240,0.4)',
+          pointBorderColor: 'rgba(221,234,240,0.4)',
+          borderWidth: 1.5,
+          borderDash: [4,4]
+        },
+        {
+          label: 'PPA',
+          data: [68, 60, 82, 68, 5, 66],
+          borderColor: 'rgba(75,162,145,0.45)',
+          backgroundColor: 'rgba(75,162,145,0.05)',
+          pointBackgroundColor: 'rgba(75,162,145,0.5)',
+          pointBorderColor: 'rgba(75,162,145,0.5)',
+          borderWidth: 1.5,
+          borderDash: [4,4]
+        }
+      ]
+    },
+    options: {
+      scales: {
+        r: {
+          min: 0, max: 100,
+          ticks: { stepSize: 25, font: { size: 9 }, backdropColor: 'transparent', color: 'rgba(221,234,240,0.3)' },
+          grid: { color: 'rgba(80,174,122,0.1)' },
+          pointLabels: { font: { size: 10.5, weight: '600' }, color: 'rgba(221,234,240,0.7)' },
+          angleLines: { color: 'rgba(80,174,122,0.12)' }
+        }
+      },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { padding: 18, font: { size: 11 }, usePointStyle: true, pointStyleWidth: 9 }
+        },
+        tooltip: { backgroundColor: 'rgba(11,29,46,0.95)', borderColor: 'rgba(80,174,122,0.25)', borderWidth: 1 }
+      },
+      elements: { line: { tension: 0.25, borderWidth: 2 }, point: { radius: 3.5, hoverRadius: 5.5 } }
+    }
+  });
+</script>
+</body>
+</html>

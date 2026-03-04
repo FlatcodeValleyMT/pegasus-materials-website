@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media — Pegasus Materials</title>
+  <meta name="description" content="Press coverage and media articles about Pegasus Materials and its bio-based specialty polymer innovations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .media-full-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border-faint);
+      border: 1px solid var(--border-faint); border-radius: 14px; overflow: hidden;
+    }
+    .media-feature-card {
+      background: var(--navy); padding: 2.25rem 2.25rem 2rem;
+      display: flex; flex-direction: column; gap: 0.75rem;
+      text-decoration: none; transition: background 0.25s;
+      grid-column: span 3;
+      border-bottom: 1px solid var(--border-faint);
+    }
+    .media-feature-card:hover { background: var(--navy-card); }
+    .media-feature-inner {
+      display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: start;
+    }
+    .mfc-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); margin-bottom: 0.5rem; }
+    .mfc-hl { font-family: var(--fd); font-size: clamp(1.3rem, 3vw, 2rem); font-weight: 700; color: var(--white); line-height: 1.2; letter-spacing: -0.02em; }
+    .mfc-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.75; }
+    .mfc-meta { display: flex; align-items: center; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; }
+    .mfc-src { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); }
+    .mfc-date { font-size: 0.7rem; color: var(--muted); font-family: 'Courier New', monospace; }
+    .mfc-read { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--green); font-weight: 600; margin-left: auto; }
+    .mfc-read svg { transition: transform 0.2s; }
+    .media-feature-card:hover .mfc-read svg { transform: translateX(3px); }
+    /* Press contact */
+    .press-contact {
+      background: var(--navy-card); border: 1px solid var(--border-faint);
+      border-radius: 14px; padding: 3rem; margin-top: 5rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    }
+    @media (max-width: 1024px) {
+      .media-full-grid { grid-template-columns: 1fr; }
+      .media-feature-card { grid-column: span 1; }
+      .media-feature-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+      .press-contact { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links.mobile-open {
+        display: flex !important; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(7,19,31,0.98); backdrop-filter: blur(20px);
+        border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+        padding: 1rem 2.5rem 1.5rem; gap: 0.1rem; z-index: 999;
+      }
+      .nav-links.mobile-open > li > a { padding: 0.5rem 0; }
+      .nav-links.mobile-open .drop-menu {
+        position: static; opacity: 1 !important; visibility: visible !important;
+        transform: none !important; background: transparent; border: none;
+        padding: 0.25rem 0 0.5rem 1rem; box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav id="nav" class="solid">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/pegasus-logo.png" alt="Pegasus Materials">
+      Pegasus Materials
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li class="nav-drop">
+        <a href="#">Products</a>
+        <div class="drop-menu">
+          <a href="virella-001.html"><span class="drop-tag">PE-001</span><br>Virella-001 — Connector</a>
+          <a href="virella-002.html"><span class="drop-tag">PE-002</span><br>Virella-002 — 3D Print</a>
+        </div>
+      </li>
+      <li><a href="media.html" class="active">Media</a></li>
+      <li><a href="index.html#contact" class="nav-cta btn">Contact Us</a></li>
+    </ul>
+    <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="page-hero-orb page-hero-orb-1"></div>
+  <div class="page-hero-orb page-hero-orb-2"></div>
+  <div class="page-hero-dots"></div>
+  <div class="container">
+    <div class="page-hero-eyebrow"><span class="t-label">Media &amp; Press</span></div>
+    <h1 class="t-display">In the <span class="grad">news.</span></h1>
+    <p class="t-lead" style="margin-top:1.25rem;max-width:520px">Press coverage, announcements, and industry commentary on Pegasus Materials and our bio-based materials technology.</p>
+  </div>
+</section>
+
+<!-- ── Press Coverage ── -->
+<section class="section" id="press">
+  <div class="sec-num">01</div>
+  <div class="container">
+    <div class="rev" style="margin-bottom:3rem">
+      <span class="t-label">Press Releases &amp; Coverage</span>
+      <h2 class="t-h2" style="margin-top:0.6rem;color:var(--white)">All Coverage</h2>
+    </div>
+
+    <div class="media-full-grid">
+
+      <!-- Featured Article 1 (Business Wire — most recent) -->
+      <a href="https://www.businesswire.com/news/home/20251120957112/en/Pegasus-Materials-Debuts-Bio-based-Specialty-Materials-for-Electronics-Aerospace-and-3D-Printing"
+         target="_blank" rel="noopener" class="media-feature-card rev">
+        <div class="media-feature-inner">
+          <div>
+            <div class="mfc-label">Latest Release</div>
+            <h2 class="mfc-hl">Pegasus Materials Debuts Bio-based Specialty Materials for Electronics, Aerospace, and 3D Printing</h2>
+            <div class="mfc-meta">
+              <span class="mfc-src">Business Wire</span>
+              <span class="mfc-date">November 20, 2025</span>
+              <span class="mfc-read">Read Full Article
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </div>
+          </div>
+          <div>
+            <p class="mfc-desc">Pegasus Materials BV announces the debut of its first two materials — Virella-001 and Virella-002 — alongside an expansion of its Seed funding round. The new investment by venture studio Ferment and existing investor LIOF, alongside prior investment from Fibrant BV, will accelerate commercial scale-up for the electronics, data center, and aerospace industries.</p>
+            <p class="mfc-desc" style="margin-top:1rem">The announcement highlights Virella-001's potential for USB-C interconnects and DDR memory connectors, and Virella-002's evaluation by aerospace and defense partners for structural aircraft components.</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Article 2 -->
+      <a href="https://www.fibrant52.com/en/about/news/2024/Pegasus-Materials-Secures-Investment-to-Transform-Polymers"
+         target="_blank" rel="noopener" class="media-card rev d1">
+        <div class="media-top">
+          <span class="media-src">Fibrant</span>
+          <span class="media-date">2024</span>
+        </div>
+        <div class="media-line"></div>
+        <p class="media-hl">Pegasus Materials Secures Investment to Transform Polymers</p>
+        <p style="font-size:0.84rem;color:var(--muted);line-height:1.65;margin-top:0.5rem">Fibrant's coverage of Pegasus Materials' early investment round, highlighting the strategic partnership and the potential of Pegasus's bio-based polymer platform to disrupt traditional polymer manufacturing.</p>
+        <span class="media-read" style="margin-top:auto">Read Article
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <!-- Article 3 -->
+      <a href="https://worldbiomarketinsights.com/pegasus-materials-unveils-bio-based-high-performance-materials/"
+         target="_blank" rel="noopener" class="media-card rev d2">
+        <div class="media-top">
+          <span class="media-src">World Biomarket Insights</span>
+          <span class="media-date">2025</span>
+        </div>
+        <div class="media-line"></div>
+        <p class="media-hl">Pegasus Materials Unveils Bio-based High-Performance Materials</p>
+        <p style="font-size:0.84rem;color:var(--muted);line-height:1.65;margin-top:0.5rem">Industry trade publication World Biomarket Insights covers the launch of Pegasus Materials' specialty polymer portfolio, with analysis of the company's technology differentiation within the industrial biotechnology landscape.</p>
+        <span class="media-read" style="margin-top:auto">Read Article
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <!-- Placeholder / Coming Soon -->
+      <div class="media-card rev d3" style="opacity:0.4;cursor:default">
+        <div class="media-top">
+          <span class="media-src">Coming Soon</span>
+          <span class="media-date">2026</span>
+        </div>
+        <div class="media-line"></div>
+        <p class="media-hl">More coverage forthcoming</p>
+        <p style="font-size:0.84rem;color:var(--muted);line-height:1.65;margin-top:0.5rem">We regularly share news, technical updates, and partnership announcements. Subscribe or check back for the latest.</p>
+      </div>
+
+    </div>
+
+    <!-- Press Contact -->
+    <div class="press-contact rev">
+      <div>
+        <span class="t-label">For Press &amp; Media</span>
+        <h2 class="t-h2" style="margin-top:0.75rem;color:var(--white)">Media inquiries <span class="grad">welcome.</span></h2>
+        <p class="t-body" style="margin-top:1rem;max-width:360px">We're happy to speak with industry journalists and podcasts covering advanced materials, industrial biotech, and building in critical industries. Please reach out.</p>
+      </div>
+      <div>
+        <div class="cinfo-list">
+          <div class="cinfo">
+            <div class="cinfo-icon">✉️</div>
+            <div>
+              <div class="cinfo-lbl">Press Inquiries</div>
+              <div class="cinfo-val"><a href="mailto:info@pegasus-materials.com">info@pegasus-materials.com</a></div>
+            </div>
+          </div>
+          <div class="cinfo">
+            <div class="cinfo-icon">👤</div>
+            <div>
+              <div class="cinfo-lbl">Richard Pieters — CEO</div>
+              <div class="cinfo-val"><a href="mailto:richard@pegasus-materials.com">richard@pegasus-materials.com</a></div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:2rem">
+          <a href="index.html#contact" class="btn btn-primary">Send a Message →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/images/pegasus-logo.png" alt="Pegasus Materials">
+          Pegasus Materials
+        </a>
+        <p>Bio-based specialty polymers for the world's most demanding applications.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="virella-001.html">Virella-001</a></li>
+          <li><a href="virella-002.html">Virella-002</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@pegasus-materials.com">info@pegasus-materials.com</a></li>
+          <li><a href="mailto:richard@pegasus-materials.com">richard@pegasus-materials.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Pegasus Materials BV. All rights reserved.</span>
+      <span class="footer-geo">Brightlands Chemelot Campus · Geleen, Netherlands</span>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

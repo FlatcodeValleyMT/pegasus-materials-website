@@ -1,0 +1,13 @@
+# Reference / working materials — not part of the website
+Context for Pegasus Website/
+ppt_extracted/
+
+# Claude Code internal files
+.claude/
+
+# Windows metadata
+desktop.ini
+Thumbs.db
+
+# macOS metadata
+.DS_Store

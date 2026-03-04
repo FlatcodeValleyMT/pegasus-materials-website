@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virella-002 — Pegasus Materials</title>
+  <meta name="description" content="Virella-002: a partially bio-based thermoplastic polyimide for industrial 3D printing, delivering true isotropic strength in all print orientations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .prod-hero {
+      padding: 9rem 0 5rem; position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--border-faint);
+    }
+    .prod-hero-orb { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; }
+    .prod-hero-orb-1 { width: 650px; height: 650px; background: var(--teal); opacity: 0.07; top: -200px; right: -100px; }
+    .prod-hero-orb-2 { width: 300px; height: 300px; background: var(--green); opacity: 0.06; bottom: -50px; left: -50px; }
+    .prod-hero-dots {
+      position: absolute; right: 0; top: 0; width: 45%; height: 100%;
+      opacity: 0.04;
+      background-image: radial-gradient(circle, var(--teal) 1.5px, transparent 1.5px);
+      background-size: 28px 28px; pointer-events: none;
+    }
+    .sibling-nav {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-faint);
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .sibling-link {
+      display: flex; align-items: center; gap: 0.65rem;
+      font-size: 0.8rem; color: var(--muted); transition: color 0.2s; text-decoration: none;
+    }
+    .sibling-link:hover { color: var(--green); }
+    .sibling-link .sl-name { font-family: var(--fd); font-size: 0.95rem; font-weight: 700; color: var(--soft); }
+    .sibling-link:hover .sl-name { color: var(--green); }
+    @media (max-width: 768px) {
+      .nav-links.mobile-open {
+        display: flex !important; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(7,19,31,0.98); backdrop-filter: blur(20px);
+        border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+        padding: 1rem 2.5rem 1.5rem; gap: 0.1rem; z-index: 999;
+      }
+      .nav-links.mobile-open > li > a { padding: 0.5rem 0; }
+      .nav-links.mobile-open .drop-menu {
+        position: static; opacity: 1 !important; visibility: visible !important;
+        transform: none !important; background: transparent; border: none;
+        padding: 0.25rem 0 0.5rem 1rem; box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav id="nav" class="solid">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/pegasus-logo.png" alt="Pegasus Materials">
+      Pegasus Materials
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li class="nav-drop">
+        <a href="#" class="active">Products</a>
+        <div class="drop-menu">
+          <a href="virella-001.html"><span class="drop-tag">PE-001</span><br>Virella-001 — Connector</a>
+          <a href="virella-002.html" class="active"><span class="drop-tag">PE-002</span><br>Virella-002 — 3D Print</a>
+        </div>
+      </li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="index.html#contact" class="nav-cta btn">Contact Us</a></li>
+    </ul>
+    <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Product Hero ── -->
+<section class="prod-hero">
+  <div class="prod-hero-orb prod-hero-orb-1"></div>
+  <div class="prod-hero-orb prod-hero-orb-2"></div>
+  <div class="prod-hero-dots"></div>
+  <div class="product-watermark">002</div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="product-kicker">PE-002 · High-Performance Polyimide for 3D Printing</div>
+    <div class="product-title-wrap">
+      <span class="product-eyename">Virella</span>
+      <span class="product-name"><span class="num">-002</span></span>
+    </div>
+    <div class="product-market">
+      <div>
+        <div class="product-market-val" style="font-size:1rem">Aerospace &amp; Defense</div>
+        <div class="product-market-lbl">Primary Market</div>
+      </div>
+      <div class="product-market-sep"></div>
+      <div>
+        <div class="product-market-val" style="font-size:1rem">Industrial 3D Printing</div>
+        <div class="product-market-lbl">Technology Area</div>
+      </div>
+      <div class="product-market-sep"></div>
+      <div>
+        <div class="product-market-val" style="color:var(--teal);font-size:1.1rem">Customer Testing</div>
+        <div class="product-market-lbl">Status</div>
+      </div>
+    </div>
+    <p class="t-lead product-intro" style="max-width:640px;margin-top:1.25rem">A partially bio-based thermoplastic polyimide for industrial 3D printing. Virella-002 delivers equal strength in every direction, withstands temperatures beyond 225°C, and enables production-grade parts in aerospace, defense, and industrial applications.</p>
+  </div>
+</section>
+
+<!-- ── Product Detail ── -->
+<section class="section">
+  <div class="container">
+    <div class="product-grid">
+
+      <!-- Left: Properties & Description -->
+      <div>
+        <span class="t-label rev">Material Overview</span>
+        <h2 class="t-h3" style="color:var(--white);margin-top:0.7rem;margin-bottom:1.5rem">
+          The Z-strength problem in 3D printing — solved.
+        </h2>
+        <p class="t-body rev d1" style="margin-bottom:1.5rem">The 3D printing industry has long faced a critical limitation: printed parts are weaker in the Z-axis than in the XY plane. For applications in aerospace, defense, and industrial manufacturing, this anisotropy makes today's high-performance polymers unsuitable for production-grade components.</p>
+        <p class="t-body rev d2" style="margin-bottom:2rem">Virella-002 is engineered to close this gap. Its novel polyimide architecture enables bonding strength in all print directions that is equal — true isotropy — while maintaining the high-temperature performance required by the most demanding end applications. The result is a material that makes 3D-printed parts genuinely suitable for real-world engineering duty cycles.</p>
+
+        <div class="t-label rev" style="margin-bottom:1.1rem;margin-top:2rem">Key Properties</div>
+        <div class="props rev d1">
+          <div class="prop">
+            <div class="prop-num">01</div>
+            <div class="prop-text"><strong>True Isotropic Strength</strong> — Equal mechanical performance in X, Y, and Z axes after printing. No weak layer interfaces.</div>
+          </div>
+          <div class="prop">
+            <div class="prop-num">02</div>
+            <div class="prop-text"><strong>High Temperature Resistance</strong> — Heat deflection temperature of 167–175°C (ISO 75), Tg of 195°C. Suitable for extended high-heat environments.</div>
+          </div>
+          <div class="prop">
+            <div class="prop-num">03</div>
+            <div class="prop-text"><strong>Inherent Flame Retardancy</strong> — Passes flame retardancy requirements without halogenated additives — essential for aerospace qualification.</div>
+          </div>
+          <div class="prop">
+            <div class="prop-num">04</div>
+            <div class="prop-text"><strong>Low Water Absorption</strong> — Maintains dimensional stability and mechanical performance in humid or outdoor environments.</div>
+          </div>
+          <div class="prop">
+            <div class="prop-num">05</div>
+            <div class="prop-text"><strong>Printable on Standard FFF Equipment</strong> — Designed to process on existing high-temperature FFF platforms — no proprietary hardware required.</div>
+          </div>
+          <div class="prop">
+            <div class="prop-num">06</div>
+            <div class="prop-text"><strong>Excellent Electrical Insulation</strong> — High dielectric strength and low dielectric loss make Virella-002 suitable for demanding electrical and electronic applications.</div>
+          </div>
+        </div>
+
+        <div class="t-label rev" style="margin-bottom:1rem;margin-top:2.5rem">Target Applications</div>
+        <div class="tags rev d1">
+          <span class="tag">Aerospace Structural Parts</span>
+          <span class="tag">Defense Components</span>
+          <span class="tag">Industrial Spare Parts</span>
+          <span class="tag">Oil &amp; Gas MRO</span>
+          <span class="tag">Marine Components</span>
+          <span class="tag">Complex Geometries</span>
+          <span class="tag">Small Series Production</span>
+          <span class="tag">Biomedical Devices</span>
+        </div>
+
+      </div>
+
+      <!-- Right: Chart + Spec Table -->
+      <div>
+        <div class="chart-box rev d2">
+          <div class="chart-label">Performance vs. Incumbents</div>
+          <div class="chart-canvas">
+            <canvas id="radarChart002"></canvas>
+          </div>
+          <div class="chart-note">All figures are directional and results will vary based on specific compounding, formulations, and applications.</div>
+        </div>
+
+        <div class="specs-box rev d3" style="margin-top:1.5rem">
+          <div class="specs-head">Competitive Comparison</div>
+          <table class="specs-table">
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Virella-002</th>
+                <th>ULTEM 1010</th>
+                <th>ULTEM 9085</th>
+                <th>VICTREX AM 200</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Z-Tensile Strength</td>
+                <td class="hi">High</td>
+                <td>Low</td>
+                <td>Medium</td>
+                <td>Very Low</td>
+              </tr>
+              <tr>
+                <td>Print Isotropy</td>
+                <td class="hi">High</td>
+                <td>Low</td>
+                <td>Medium</td>
+                <td>Very Low</td>
+              </tr>
+              <tr>
+                <td>Heat Resistance (HDT)</td>
+                <td>Medium-High</td>
+                <td class="hi">Very High</td>
+                <td>High</td>
+                <td class="hi">Very High</td>
+              </tr>
+              <tr>
+                <td>Electrical Insulation</td>
+                <td class="hi">High</td>
+                <td class="hi">High</td>
+                <td class="hi">High</td>
+                <td>Medium</td>
+              </tr>
+              <tr>
+                <td>Flame Retardancy</td>
+                <td class="hi">High</td>
+                <td class="hi">High</td>
+                <td class="hi">High</td>
+                <td class="hi">High</td>
+              </tr>
+              <tr>
+                <td>Processability</td>
+                <td>Medium</td>
+                <td class="hi">High</td>
+                <td class="hi">High</td>
+                <td>Low</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Break Panel ── -->
+<div class="break-panel">
+  <div class="container">
+    <div class="break-inner">
+      <span class="break-kicker">Aerospace Ready</span>
+      <p class="break-quote">
+        Virella-002 is being evaluated by aerospace and defense partners for use in <em>aircraft components where strength, heat resistance, and weight savings</em> are priorities.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA ── -->
+<section class="section section-mid">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+      <div class="rev">
+        <span class="t-label">Access Technical Data</span>
+        <h2 class="t-h2" style="margin-top:0.75rem;color:var(--white)">Download the<br><span class="grad">spec sheet.</span></h2>
+        <p class="t-body" style="margin-top:1.25rem;margin-bottom:2rem">Download the full Technical Data Sheet for Virella-002, including comprehensive mechanical, thermal, electrical, and processing data. Or contact our team to discuss qualification programs and sample availability.</p>
+        <div class="actions">
+          <a href="assets/docs/virella-002-spec-sheet.pdf" class="btn btn-primary" download>
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3v12M7 13l5 5 5-5M5 21h14"/></svg>
+            Download Spec Sheet
+          </a>
+          <a href="index.html#contact" class="btn btn-outline">Contact Our Team</a>
+        </div>
+      </div>
+      <div class="rev d1">
+        <div style="padding:2rem;background:var(--navy-card);border:1px solid var(--border-faint);border-radius:14px">
+          <div class="t-label" style="margin-bottom:1.5rem">Spec Sheet Contents</div>
+          <div class="props" style="margin:0">
+            <div class="prop">
+              <div class="prop-num">→</div>
+              <div class="prop-text">Full mechanical property tables (ISO 527, ASTM D638, ASTM 1708)</div>
+            </div>
+            <div class="prop">
+              <div class="prop-num">→</div>
+              <div class="prop-text">Thermal properties: HDT, Tg, CTE across temperature ranges</div>
+            </div>
+            <div class="prop">
+              <div class="prop-num">→</div>
+              <div class="prop-text">Electrical properties: dielectric constant, loss, breakdown voltage</div>
+            </div>
+            <div class="prop">
+              <div class="prop-num">→</div>
+              <div class="prop-text">Complete recommended printing parameters and guidelines</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Sibling navigation ── -->
+<section class="section" style="padding:3rem 0">
+  <div class="container">
+    <div class="sibling-nav">
+      <a href="virella-001.html" class="sibling-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        <div>
+          <div style="font-size:0.65rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.15rem">Previous Product</div>
+          <div class="sl-name">← Virella-001 — Connector</div>
+        </div>
+      </a>
+      <a href="index.html" class="sibling-link">
+        Back to Home
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/images/pegasus-logo.png" alt="Pegasus Materials">
+          Pegasus Materials
+        </a>
+        <p>Bio-based specialty materials for the world's most demanding applications.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="virella-001.html">Virella-001</a></li>
+          <li><a href="virella-002.html">Virella-002</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@pegasus-materials.com">info@pegasus-materials.com</a></li>
+          <li><a href="mailto:richard@pegasus-materials.com">richard@pegasus-materials.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Pegasus Materials BV. All rights reserved.</span>
+      <span class="footer-geo">Brightlands Chemelot Campus · Geleen, Netherlands</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="scripts.js"></script>
+<script>
+  // Radar Chart — Virella-002 vs ULTEM 1010 vs ULTEM 9085 vs VICTREX AM 200
+  Chart.defaults.color = 'rgba(221,234,240,0.55)';
+  Chart.defaults.font.family = "'Inter', sans-serif";
+
+  new Chart(document.getElementById('radarChart002').getContext('2d'), {
+    type: 'radar',
+    data: {
+      labels: ['Z-Strength', 'Isotropy', 'Electrical', 'Thermal', 'Processability'],
+      datasets: [
+        {
+          label: 'Virella-002',
+          data: [75, 90, 78, 25, 30],
+          borderColor: '#50AE7A',
+          backgroundColor: 'rgba(80,174,122,0.15)',
+          pointBackgroundColor: '#50AE7A',
+          pointBorderColor: '#fff',
+          borderWidth: 2.5
+        },
+        {
+          label: 'ULTEM 1010',
+          data: [35, 48, 72, 22, 65],
+          borderColor: 'rgba(221,234,240,0.35)',
+          backgroundColor: 'rgba(221,234,240,0.04)',
+          pointBackgroundColor: 'rgba(221,234,240,0.4)',
+          pointBorderColor: 'rgba(221,234,240,0.4)',
+          borderWidth: 1.5,
+          borderDash: [4,4]
+        },
+        {
+          label: 'ULTEM 9085',
+          data: [50, 55, 68, 28, 72],
+          borderColor: 'rgba(75,162,145,0.45)',
+          backgroundColor: 'rgba(75,162,145,0.04)',
+          pointBackgroundColor: 'rgba(75,162,145,0.5)',
+          pointBorderColor: 'rgba(75,162,145,0.5)',
+          borderWidth: 1.5,
+          borderDash: [4,4]
+        },
+        {
+          label: 'VICTREX AM 200',
+          data: [10, 38, 62, 85, 35],
+          borderColor: 'rgba(255,180,80,0.4)',
+          backgroundColor: 'rgba(255,180,80,0.04)',
+          pointBackgroundColor: 'rgba(255,180,80,0.5)',
+          pointBorderColor: 'rgba(255,180,80,0.5)',
+          borderWidth: 1.5,
+          borderDash: [4,4]
+        }
+      ]
+    },
+    options: {
+      scales: {
+        r: {
+          min: 0, max: 100,
+          ticks: { stepSize: 25, font: { size: 9 }, backdropColor: 'transparent', color: 'rgba(221,234,240,0.3)' },
+          grid: { color: 'rgba(80,174,122,0.1)' },
+          pointLabels: { font: { size: 11, weight: '600' }, color: 'rgba(221,234,240,0.7)' },
+          angleLines: { color: 'rgba(80,174,122,0.12)' }
+        }
+      },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { padding: 14, font: { size: 10.5 }, usePointStyle: true, pointStyleWidth: 9 }
+        },
+        tooltip: { backgroundColor: 'rgba(11,29,46,0.95)', borderColor: 'rgba(80,174,122,0.25)', borderWidth: 1 }
+      },
+      elements: { line: { tension: 0.25, borderWidth: 2 }, point: { radius: 3.5, hoverRadius: 5.5 } }
+    }
+  });
+</script>
+</body>
+</html>

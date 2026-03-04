@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Pegasus Materials</title>
+  <meta name="description" content="Pegasus Materials combines synthetic biology, AI-accelerated chemistry, and deep materials science to engineer next-generation bio-based specialty materials.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @media (max-width: 768px) {
+      .nav-links.mobile-open {
+        display: flex !important; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(7,19,31,0.98); backdrop-filter: blur(20px);
+        border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+        padding: 1rem 2.5rem 1.5rem; gap: 0.1rem; z-index: 999;
+      }
+      .nav-links.mobile-open > li > a { padding: 0.5rem 0; }
+      .nav-links.mobile-open .drop-menu {
+        position: static; opacity: 1 !important; visibility: visible !important;
+        transform: none !important; background: transparent; border: none;
+        padding: 0.25rem 0 0.5rem 1rem; box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav id="nav" class="solid">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/pegasus-logo.png" alt="Pegasus Materials">
+      Pegasus Materials
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li class="nav-drop">
+        <a href="#">Products</a>
+        <div class="drop-menu">
+          <a href="virella-001.html"><span class="drop-tag">PE-001</span><br>Virella-001 — Connector</a>
+          <a href="virella-002.html"><span class="drop-tag">PE-002</span><br>Virella-002 — 3D Print</a>
+        </div>
+      </li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="index.html#contact" class="nav-cta btn">Contact Us</a></li>
+    </ul>
+    <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="page-hero-orb page-hero-orb-1"></div>
+  <div class="page-hero-orb page-hero-orb-2"></div>
+  <div class="page-hero-dots"></div>
+  <div class="container">
+    <div class="page-hero-eyebrow"><span class="t-label">About Us</span></div>
+    <h1 class="t-display">The science behind<br><span class="grad">Pegasus Materials.</span></h1>
+    <p class="t-lead" style="margin-top:1.25rem;max-width:560px">We're building the next generation of specialty materials — high-performance, bio-based, and designed for the industries that demand the very best.</p>
+  </div>
+</section>
+
+<!-- ── About Section ── -->
+<section class="section" id="about">
+  <div class="sec-num">01</div>
+  <div class="container">
+    <div class="about-top">
+      <div>
+        <div class="about-num">PM</div>
+      </div>
+      <div>
+        <span class="t-label rev">Our Story</span>
+        <p class="about-lead rev d1">
+          Founded in 2023 by materials veterans with over 50 combined years of experience at DSM Engineering Plastics, GE, Apple, and Zymergen — <em>we saw the gap</em> that conventional chemistry couldn't close.
+        </p>
+        <div class="about-body-grid rev d2">
+          <div class="about-body">
+            <p>Companies in electronics, aerospace, and advanced manufacturing are pushing beyond what today's petrochemical polymers can deliver. Faster data transfer demands better dielectric properties. Lighter aerospace structures need thermoplastics that withstand extreme heat. 3D-printed parts need to be as strong in the Z-axis as anywhere else.</p>
+          </div>
+          <div class="about-body">
+            <p>Pegasus Materials was founded to meet these unmet needs — using bio-based building blocks that give our polymers unique chemical structures unavailable to conventional synthesis, combined with AI-guided molecular design to accelerate discovery from years to months.</p>
+          </div>
+        </div>
+        <div class="actions rev d3" style="margin-top:2.5rem">
+          <a href="virella-001.html" class="btn btn-primary">View Products →</a>
+          <a href="team.html" class="btn btn-outline">Meet the Team</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Break Panel ── -->
+<div class="break-panel">
+  <div class="container">
+    <div class="break-inner">
+      <span class="break-kicker">Why It Matters</span>
+      <p class="break-quote">
+        The global polymer industry is ripe for disruption. <em>Biology unlocks chemistry</em> that petrochemistry never could.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ── Market Opportunity ── -->
+<section class="section section-mid">
+  <div class="sec-num">02</div>
+  <div class="side-label">Market</div>
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start" class="rev">
+      <div>
+        <span class="t-label">Market Focus</span>
+        <h2 class="t-h2" style="margin-top:0.75rem;color:var(--white)">We go where <span class="grad">performance demands</span> are highest.</h2>
+      </div>
+      <div>
+        <p class="t-lead rev d1" style="font-size:1rem;margin-bottom:2rem">Pegasus is squarely focused on the high-performance segment — where materials must meet the most demanding specifications, and where bio-based chemistry has the biggest structural advantage over conventional petrochemicals.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-faint);border:1px solid var(--border-faint);border-radius:12px;overflow:hidden" class="rev d2">
+          <div style="background:var(--navy-card);padding:1.75rem 1.5rem">
+            <div style="font-size:1.75rem;margin-bottom:0.75rem">⚡</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--green);margin:.3rem 0 .6rem;letter-spacing:.08em">ELECTRONICS</div>
+            <div style="font-size:0.82rem;color:var(--muted);line-height:1.6">Connectors, semiconductors, EV charging, and AI hardware — where every degree of heat resistance and every bit of signal integrity matters.</div>
+          </div>
+          <div style="background:var(--navy-card);padding:1.75rem 1.5rem">
+            <div style="font-size:1.75rem;margin-bottom:0.75rem">✈️</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--teal);margin:.3rem 0 .6rem;letter-spacing:.08em">AEROSPACE &amp; DEFENSE</div>
+            <div style="font-size:0.82rem;color:var(--muted);line-height:1.6">Structural aircraft components, defense systems, and spacecraft — demanding the highest strength-to-weight ratios and extreme temperature performance.</div>
+          </div>
+          <div style="background:var(--navy-card);padding:1.75rem 1.5rem">
+            <div style="font-size:1.75rem;margin-bottom:0.75rem">🏭</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--soft);margin:.3rem 0 .6rem;letter-spacing:.08em">INDUSTRIAL &amp; MANUFACTURING</div>
+            <div style="font-size:0.82rem;color:var(--muted);line-height:1.6">3D printing for production parts, medical devices, and industrial tooling — where performance and sustainability must coexist.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Process Steps ── -->
+<section class="process-section">
+  <div class="container">
+    <div class="process-header">
+      <div class="rev">
+        <span class="t-label">How We Build</span>
+        <h2 class="t-h2" style="margin-top:0.6rem;color:var(--white)">From need to<br><span class="grad">commercial material.</span></h2>
+      </div>
+      <p class="t-body rev d1">An experienced network of CRO and CMO partners means we scale efficiently without building costly infrastructure from scratch.</p>
+    </div>
+    <div class="process-steps">
+      <div class="pstep rev d1">
+        <div class="pstep-dot"><span>01</span></div>
+        <div class="pstep-title">Capture Need</div>
+        <div class="pstep-dur">1–3 months</div>
+        <p class="pstep-desc">Identify unmet customer requirements through deep application expertise and our global industry network.</p>
+      </div>
+      <div class="pstep rev d2">
+        <div class="pstep-dot"><span>02</span></div>
+        <div class="pstep-title">Design Material</div>
+        <div class="pstep-dur">3–12 months</div>
+        <p class="pstep-desc">Translate needs into polymer architecture using AI/ML, chemistry, and synthetic biology know-how. Capture IP.</p>
+      </div>
+      <div class="pstep rev d3">
+        <div class="pstep-dot"><span>03</span></div>
+        <div class="pstep-title">Scale at CMO</div>
+        <div class="pstep-dur">6–12 months</div>
+        <p class="pstep-desc">Partner with contract manufacturers to scale production, validate at customer sites, and secure additional IP.</p>
+      </div>
+      <div class="pstep rev d4">
+        <div class="pstep-dot"><span>04</span></div>
+        <div class="pstep-title">Expand &amp; Grow</div>
+        <div class="pstep-dur">Ongoing</div>
+        <p class="pstep-desc">Develop novel formulations to take our materials into new application spaces for our customers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Partners ── -->
+<section class="partners-section">
+  <div class="container">
+    <div class="partners-inner">
+      <span class="partners-label">Our Partners</span>
+      <div class="partners-row">
+        <a href="https://ferment.co" target="_blank" rel="noopener" class="partner-logo-wrap">
+          <img src="assets/images/ferment-logo.png" alt="Ferment">
+        </a>
+        <a href="https://businessinlimburg.com" target="_blank" rel="noopener" class="partner-logo-wrap">
+          <img src="https://businessinlimburg.com/application/themes/z_theme/assets/images/liof-logo.svg" alt="LIOF">
+        </a>
+        <a href="https://www.fibrant52.com" target="_blank" rel="noopener" class="partner-logo-wrap">
+          <img src="https://www.fibrant52.com/Frontend/Images/FibrantLogo.png" alt="Fibrant">
+        </a>
+        <a href="https://www.brightlands.com" target="_blank" rel="noopener" class="partner-logo-wrap">
+          <img src="https://www.brightlands.com/sites/default/themes/custom/brightlands/assets/images/brightlands-screen-180x48-black.svg" alt="Brightlands Chemelot">
+        </a>
+        <a href="https://just-transition.ec.europa.eu" target="_blank" rel="noopener" class="partner-logo-wrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" alt="EU Just Transition Fund" style="height:34px;width:auto">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/images/pegasus-logo.png" alt="Pegasus Materials">
+          Pegasus Materials
+        </a>
+        <p>Bio-based specialty materials for the world's most demanding applications.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="virella-001.html">Virella-001</a></li>
+          <li><a href="virella-002.html">Virella-002</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@pegasus-materials.com">info@pegasus-materials.com</a></li>
+          <li><a href="mailto:richard@pegasus-materials.com">richard@pegasus-materials.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Pegasus Materials BV. All rights reserved.</span>
+      <span class="footer-geo">Brightlands Chemelot Campus · Geleen, Netherlands</span>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
